@@ -1,0 +1,31 @@
+def numero_cifre(x):
+    if x==0:
+        return 0
+    else:
+        return 1+numero_cifre(x//10)
+def codifica(a,b):
+    if a>=b:
+        return (b+(a*10**numero_cifre(b)))
+    else:
+        return (a+(b*10**numero_cifre(a)))
+def unisci(a,b):
+    if a>=b:
+        return codifica(a,b)*(10**((numero_cifre(b))+1))+(3*10**numero_cifre(b))
+    else:
+        return codifica(a,b)*(10**((numero_cifre(a))+1))+(3*10**numero_cifre(a))
+#c=unisci(a,b)
+def primo_numero(c):
+    n=0
+    while c%10==0:
+        n=n+1
+        c=c/10
+    return ((c-3)/10)//10**(n)
+def secondo_numero(c):
+    n=0
+    while c%10==0:
+        n=n+1
+        c=c/10
+    return (c-(c//10**(n+1))*10**(n+1))//10
+    
+
+    
