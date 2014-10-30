@@ -1,3 +1,8 @@
+#Ho usato il metodo che consiste nel porre in sequenza i due numeri, mettere un numero identificativo (nel nel caso specifico) 
+#e dopo di esso aggiungere tanti zeri quante sono le cifre del primo numero. Dopodichè alla decodifica verrano scartati 
+#gli zeri, il 3, e saranno quindi trovati prima il primo numero e poi il secondo grazie alla divisione intera.
+
+
 def numero_cifre(x):
     if x==0:
         return 0
